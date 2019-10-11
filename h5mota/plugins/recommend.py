@@ -10,11 +10,11 @@ def save_load(con='S'):
     global tower_info
     import json
     if con == 'S':
-        with open("cache,json", "w") as fp:
+        with open("cache.json", "w") as fp:
             json.dump(tower_info, fp, ensure_ascii=False)
     else:
         try:
-            with open("cache,json", "r") as fp:
+            with open("cache.json", "r") as fp:
                 tower_info = json.load(fp)
         except:
             pass
